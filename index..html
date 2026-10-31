@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Listing Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 25px;
+        }
+
+        header {
+            text-align: center;
+            background-color: #222;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        .api {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 25px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(250px, 1fr)
+            );
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            font-size: 18px;
+            color: #222;
+            margin-bottom: 12px;
+        }
+
+        .card img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            display: block;
+            margin: 15px auto;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .price {
+            color: green !important;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .description {
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 25px;
+            color: #555;
+        }
+
+        @media(max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Product Store</h1>
+        <p>Explore Our Latest Products</p>
+    </header>
+
+    <!-- API STATUS -->
+    <div class="api">
+        Loading...
+    </div>
+
+    <!-- PRODUCT LIST -->
+    <div class="products" id="productList">
+    </div>
+
+    <footer>
+        <p>Product Listing Page - Mini Project</p>
+        <p>Created using HTML, CSS and JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
